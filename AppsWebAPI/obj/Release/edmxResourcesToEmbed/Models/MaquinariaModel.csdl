@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Android_DataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Android_DataBaseEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="MQ_CHEQUEO_INSERT">
+      <Parameter Name="Sistema_Electrico" Mode="In" Type="String" />
+      <Parameter Name="Cilindros" Mode="In" Type="String" />
+      <Parameter Name="BombaHD" Mode="In" Type="String" />
+      <Parameter Name="Rodaje_Cadena" Mode="In" Type="String" />
+      <Parameter Name="Cuchilla" Mode="In" Type="String" />
+      <Parameter Name="Llantas" Mode="In" Type="String" />
+      <Parameter Name="Mangueras" Mode="In" Type="String" />
+      <Parameter Name="Sillones" Mode="In" Type="String" />
+      <Parameter Name="Vidrios" Mode="In" Type="String" />
+      <Parameter Name="Motor" Mode="In" Type="String" />
+      <Parameter Name="Otros" Mode="In" Type="String" />
+      <Parameter Name="Codigo_Maquina" Mode="In" Type="Int32" />
+      <Parameter Name="Codigo_Supervisor" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MQ_CHEQUEO_LISTA" ReturnType="Collection(Android_DataBaseModel.MQ_CHEQUEO_LISTA_Result)" />
+    <FunctionImport Name="MQ_CHEQUEO_UPDATE">
+      <Parameter Name="Sistema_Electrico" Mode="In" Type="String" />
+      <Parameter Name="Cilindros" Mode="In" Type="String" />
+      <Parameter Name="BombaHD" Mode="In" Type="String" />
+      <Parameter Name="Rodaje_Cadena" Mode="In" Type="String" />
+      <Parameter Name="Cuchilla" Mode="In" Type="String" />
+      <Parameter Name="Llantas" Mode="In" Type="String" />
+      <Parameter Name="Mangueras" Mode="In" Type="String" />
+      <Parameter Name="Sillones" Mode="In" Type="String" />
+      <Parameter Name="Vidrios" Mode="In" Type="String" />
+      <Parameter Name="Motor" Mode="In" Type="String" />
+      <Parameter Name="Otros" Mode="In" Type="String" />
+      <Parameter Name="Codigo_Maquina" Mode="In" Type="Int32" />
+      <Parameter Name="Codigo_Supervisor" Mode="In" Type="Int32" />
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MQ_MAQUINAS_INSERT">
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="tipo" Mode="In" Type="Int32" />
+      <Parameter Name="Periodo_Mantenimiento" Mode="In" Type="String" />
+      <Parameter Name="Placa" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="Marca" Mode="In" Type="String" />
+      <Parameter Name="Modelo" Mode="In" Type="String" />
+      <Parameter Name="CentroCosto" Mode="In" Type="String" />
+      <Parameter Name="Serie" Mode="In" Type="String" />
+      <Parameter Name="NoChasis" Mode="In" Type="String" />
+      <Parameter Name="Motor" Mode="In" Type="String" />
+      <Parameter Name="Vin" Mode="In" Type="String" />
+      <Parameter Name="Color" Mode="In" Type="String" />
+      <Parameter Name="codigoAF" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MQ_MAQUINAS_LISTA" ReturnType="Collection(Android_DataBaseModel.MQ_MAQUINAS_LISTA_Result)" />
+    <FunctionImport Name="MQ_MAQUINAS_LISTA_APP" ReturnType="Collection(Android_DataBaseModel.MQ_MAQUINAS_LISTA_APP_Result)" />
+    <FunctionImport Name="MQ_REPARACION_INSERT">
+      <Parameter Name="Fecha_Paralizacion" Mode="In" Type="DateTime" />
+      <Parameter Name="Fecha_Inicio" Mode="In" Type="DateTime" />
+      <Parameter Name="Estado_Reparacion" Mode="In" Type="String" />
+      <Parameter Name="Fecha_Fin" Mode="In" Type="DateTime" />
+      <Parameter Name="Dias_Asignados" Mode="In" Type="Int32" />
+      <Parameter Name="Codigo_Maquina" Mode="In" Type="Int32" />
+      <Parameter Name="Diagnostico" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MQ_REPARACION_LISTA" ReturnType="Collection(Android_DataBaseModel.MQ_REPARACION_LISTA_Result)" />
+    <FunctionImport Name="MQ_REPARACION_UPDATE">
+      <Parameter Name="Fecha_Paralizacion" Mode="In" Type="DateTime" />
+      <Parameter Name="Fecha_Inicio" Mode="In" Type="DateTime" />
+      <Parameter Name="Estado_Reparacion" Mode="In" Type="String" />
+      <Parameter Name="Fecha_Fin" Mode="In" Type="DateTime" />
+      <Parameter Name="Dias_Asignados" Mode="In" Type="Int32" />
+      <Parameter Name="Codigo_Maquina" Mode="In" Type="Int32" />
+      <Parameter Name="Diagnostico" Mode="In" Type="String" />
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MQ_MAQUINAS_TIPO_LISTA" ReturnType="Collection(Android_DataBaseModel.MQ_MAQUINAS_TIPO_LISTA_Result)" />
+    <FunctionImport Name="MQ_MAQUINAS_LISTADO_TIPO" ReturnType="Collection(Android_DataBaseModel.MQ_MAQUINAS_LISTADO_TIPO_Result)" />
+    <FunctionImport Name="MQ_LOGIN_SUPERVISOR" ReturnType="Collection(Android_DataBaseModel.MQ_LOGIN_SUPERVISOR_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="MQ_CHEQUEO_LISTA_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="CodigoSupervisor" Nullable="false" />
+    <Property Type="String" Name="NombreProveedor" Nullable="false" MaxLength="14" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Sistema_Electrico" Nullable="true" />
+    <Property Type="String" Name="Cilindros" Nullable="true" />
+    <Property Type="String" Name="BombaHD" Nullable="true" />
+    <Property Type="String" Name="Rodaje_Cadena" Nullable="true" />
+    <Property Type="String" Name="Cuchilla" Nullable="true" />
+    <Property Type="String" Name="Llantas" Nullable="true" />
+    <Property Type="String" Name="Mangueras" Nullable="true" />
+    <Property Type="String" Name="Sillones" Nullable="true" />
+    <Property Type="String" Name="Vidrios" Nullable="true" />
+    <Property Type="String" Name="Motor" Nullable="true" />
+    <Property Type="String" Name="Otros" Nullable="true" />
+    <Property Type="Int32" Name="Codigo_Maquina" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="MQ_MAQUINAS_LISTA_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Periodo_Mantenimiento" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Placa" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="MQ_MAQUINAS_LISTA_APP_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="tipo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Periodo_Mantenimiento" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Placa" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="MQ_REPARACION_LISTA_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="Codigo_Maquina" Nullable="true" />
+    <Property Type="String" Name="NombreMaquina" Nullable="false" MaxLength="5" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Fecha_Paralizacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Fecha_Inicio" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Estado_Reparacion" Nullable="true" />
+    <Property Type="DateTime" Name="Fecha_Fin" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Dias_Asignados" Nullable="true" />
+    <Property Type="String" Name="Diagnostico" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="MQ_MAQUINAS_TIPO_LISTA_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="MQ_MAQUINAS_LISTADO_TIPO_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="MQ_LOGIN_SUPERVISOR_Result">
+    <Property Type="Int32" Name="idSupervisor" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="apellido" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="usuario" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="255" />
+  </ComplexType>
+</Schema>

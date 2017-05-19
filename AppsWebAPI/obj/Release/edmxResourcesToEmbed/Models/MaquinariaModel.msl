@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Android_DataBaseModelStoreContainer" CdmEntityContainer="Android_DataBaseEntities">
+    <FunctionImportMapping FunctionImportName="MQ_CHEQUEO_INSERT" FunctionName="Android_DataBaseModel.Store.MQ_CHEQUEO_INSERT" />
+    <FunctionImportMapping FunctionImportName="MQ_CHEQUEO_LISTA" FunctionName="Android_DataBaseModel.Store.MQ_CHEQUEO_LISTA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Android_DataBaseModel.MQ_CHEQUEO_LISTA_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodigoSupervisor" ColumnName="CodigoSupervisor" />
+          <ScalarProperty Name="NombreProveedor" ColumnName="NombreProveedor" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Sistema_Electrico" ColumnName="Sistema_Electrico" />
+          <ScalarProperty Name="Cilindros" ColumnName="Cilindros" />
+          <ScalarProperty Name="BombaHD" ColumnName="BombaHD" />
+          <ScalarProperty Name="Rodaje_Cadena" ColumnName="Rodaje_Cadena" />
+          <ScalarProperty Name="Cuchilla" ColumnName="Cuchilla" />
+          <ScalarProperty Name="Llantas" ColumnName="Llantas" />
+          <ScalarProperty Name="Mangueras" ColumnName="Mangueras" />
+          <ScalarProperty Name="Sillones" ColumnName="Sillones" />
+          <ScalarProperty Name="Vidrios" ColumnName="Vidrios" />
+          <ScalarProperty Name="Motor" ColumnName="Motor" />
+          <ScalarProperty Name="Otros" ColumnName="Otros" />
+          <ScalarProperty Name="Codigo_Maquina" ColumnName="Codigo_Maquina" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MQ_CHEQUEO_UPDATE" FunctionName="Android_DataBaseModel.Store.MQ_CHEQUEO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="MQ_MAQUINAS_INSERT" FunctionName="Android_DataBaseModel.Store.MQ_MAQUINAS_INSERT" />
+    <FunctionImportMapping FunctionImportName="MQ_MAQUINAS_LISTA" FunctionName="Android_DataBaseModel.Store.MQ_MAQUINAS_LISTA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Android_DataBaseModel.MQ_MAQUINAS_LISTA_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="Periodo_Mantenimiento" ColumnName="Periodo_Mantenimiento" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MQ_MAQUINAS_LISTA_APP" FunctionName="Android_DataBaseModel.Store.MQ_MAQUINAS_LISTA_APP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Android_DataBaseModel.MQ_MAQUINAS_LISTA_APP_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="Periodo_Mantenimiento" ColumnName="Periodo_Mantenimiento" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MQ_REPARACION_INSERT" FunctionName="Android_DataBaseModel.Store.MQ_REPARACION_INSERT" />
+    <FunctionImportMapping FunctionImportName="MQ_REPARACION_LISTA" FunctionName="Android_DataBaseModel.Store.MQ_REPARACION_LISTA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Android_DataBaseModel.MQ_REPARACION_LISTA_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Codigo_Maquina" ColumnName="Codigo_Maquina" />
+          <ScalarProperty Name="NombreMaquina" ColumnName="NombreMaquina" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Fecha_Paralizacion" ColumnName="Fecha_Paralizacion" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Estado_Reparacion" ColumnName="Estado_Reparacion" />
+          <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+          <ScalarProperty Name="Dias_Asignados" ColumnName="Dias_Asignados" />
+          <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MQ_REPARACION_UPDATE" FunctionName="Android_DataBaseModel.Store.MQ_REPARACION_UPDATE" />
+    <FunctionImportMapping FunctionImportName="MQ_MAQUINAS_LISTADO_TIPO" FunctionName="Android_DataBaseModel.Store.MQ_MAQUINAS_LISTADO_TIPO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Android_DataBaseModel.MQ_MAQUINAS_LISTADO_TIPO_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MQ_LOGIN_SUPERVISOR" FunctionName="Android_DataBaseModel.Store.MQ_LOGIN_SUPERVISOR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Android_DataBaseModel.MQ_LOGIN_SUPERVISOR_Result">
+          <ScalarProperty Name="idSupervisor" ColumnName="idSupervisor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

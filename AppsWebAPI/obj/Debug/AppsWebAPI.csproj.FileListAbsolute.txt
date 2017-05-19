@@ -98,3 +98,6 @@ F:\Rosul\WEB-API\AppsWebAPI\AppsWebAPI\bin\es\System.Web.Http.Owin.resources.dll
 F:\Rosul\WEB-API\AppsWebAPI\AppsWebAPI\obj\Debug\AppsWebAPI.csprojResolveAssemblyReference.cache
 F:\Rosul\WEB-API\AppsWebAPI\AppsWebAPI\obj\Debug\AppsWebAPI.dll
 F:\Rosul\WEB-API\AppsWebAPI\AppsWebAPI\obj\Debug\AppsWebAPI.pdb
+F:\Rosul\WEB-API\AppsWebAPI\AppsWebAPI\bin\System.Web.Cors.dll
+F:\Rosul\WEB-API\AppsWebAPI\AppsWebAPI\bin\System.Web.Http.Cors.dll
+F:\Rosul\WEB-API\AppsWebAPI\AppsWebAPI\bin\System.Web.Http.Cors.xml
